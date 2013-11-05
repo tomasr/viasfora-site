@@ -1,10 +1,12 @@
 .nav {
   font-size: 28px;
 }
+
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:hover {
   background-color: #AC6166;
 }
+.nav-tabs>li>a,
 .nav-pills>li>a {
   color: #6E0006;
 }
@@ -12,3 +14,9 @@
 
 #logo {
 }
+
+.fimg {
+  background-color: #e0e0e0;
+  padding: 2px;
+}
+

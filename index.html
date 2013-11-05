@@ -32,60 +32,101 @@
 
       <div class="jumbotron">
         <h1>Viasfora</h1>
-        <p class="lead">An extension for Visual Studio 2010, 2012 and 2013 that adds miscellaneous
-        (but useful!) enhancements to the VS Text Editing experience!</p>
+        <p class="lead">A Visual Studio 2010, 2012, and 2013 extension that adds miscellaneous
+        (but useful!) enhancements to the VS Text Editing experience.</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Download Now</a></p>
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-6">
-          <h3>Text Editor</h3>
-          <h4>Current Line Highlight</h4>
-          <p>Highlight the current line in the text editor, like the built-in one
-          in VS2013, but also available in previous Visual Studio versions.
-          Customize the look through the &quot;Current Line&quot; entry in the
-          <i>Fonts and Colors</i> options page.</p>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="featuresTab">
+          <li><a href="#TextEd" data-toggle="tab">Text Editor</a></li>
+          <li><a href="#XmlEd" data-toggle="tab">XML Editor</a></li>
+          <li><a href="#Config" data-toggle="tab">Configuration</a></li>
+        </ul>
 
-          <h4>Control Flow Classifier</h4>
-          <p>Customize how control-flow related keywords in C#, VB, C/C++, JS are rendered
-          in the VS editor. You can choose which keywords are selected in each language
-          and customize the presentation through the &quot;Keyword - Flow Control&quot; entry
-          in the <i>Fonts and Colors</i> options page.</p>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="TextEd">
+            <h4>Current Line Highlight</h4>
+            <p>Highlight the current line in the text editor, like the built-in one
+            in VS2013, but also available in previous Visual Studio versions.
+            Customize the look through the &quot;Current Line&quot; entry in the
+            <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/text-current-line.png' class='fimg' />
 
-          <h4>LINQ Classifier</h4>
-          <p>Customize how Language Integrated Query (LINQ) keywords are rendered in the VS editor.
-          You can choose which keywords are selected for C#, VB, and JS and customize the 
-          presentation through the &quot;Operator - LINQ&quot; entry
-          in the <i>Fonts and Colors</i> options page.</p>
+            <hr/>
 
-          <h4>Visibility Classifier</h4>
-          <p>Customize how visibility related keywords in C#, VB, and C++ are rendered
-          in the VS editor. You can choose which keywords are selected in each language
-          and customize the presentation through the &quot;Keyword - Visibility&quot; entry
-          in the <i>Fonts and Colors</i> options page.</p>
+            <h4>Control Flow Classifier</h4>
+            <p>Customize how control-flow related keywords in C#, VB, C/C++, JS are rendered
+            in the VS editor. You can choose which keywords are selected in each language
+            and customize the presentation through the &quot;Keyword - Flow Control&quot; entry
+            in the <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/text-flow-control.png' class='fimg' />
 
-          <h4>String Escape Chars</h4>
-          <p>Easily recognize escape sequences in your string literals in C#, JS, and C/C++.
-          Customize the presentation through the &quot;String Escape Sequence&quot; entry
-          in the <i>Fonts and Colors</i> options page.</p>
-        </div>
+            <hr/>
 
-        <div class="col-lg-6">
-          <h3>XML Editor</h3>
-          <h4>Namespace Prefixes</h4>
-          <p>Customize how XML namespace prefixes are rendered in the VS XML editor through
-          the &quot;XML Prefix&quot; entry in the <i>Fonts and Colors</i> options page.</p>
+            <h4>LINQ Classifier</h4>
+            <p>Customize how Language Integrated Query (LINQ) keywords are rendered in the VS editor.
+            You can choose which keywords are selected for C#, VB, and JS and customize the 
+            presentation through the &quot;Operator - LINQ&quot; entry
+            in the <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/text-linq.png' class='fimg' />
 
-          <h4>XML Closing Tags</h4>
-          <p>Render XML closing element tags in a different color color through
-          the &quot;XML Closing Tag&quot; entry in the <i>Fonts and Colors</i> options page.</p>
+            <hr/>
 
-          <h4>Match Element Tags</h4>
-          <p>Highlight matching opening/closing element tags.</p>
+            <h4>Visibility Classifier</h4>
+            <p>Customize how visibility related keywords in C#, VB, and C++ are rendered
+            in the VS editor. You can choose which keywords are selected in each language
+            and customize the presentation through the &quot;Keyword - Visibility&quot; entry
+            in the <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/text-visibility.png' class='fimg' />
 
-          <h4>Resolve Namespace Prefixes</h4>
-          <p>Put the cursor over an XML namespace prefix, and a tooltip will
-          tell you what it is mapped to in that context!</p>
+            <hr/>
+
+            <h4>String Escape Chars</h4>
+            <p>Easily recognize escape sequences in your string literals in C#, JS, and C/C++.
+            Customize the presentation through the &quot;String Escape Sequence&quot; entry
+            in the <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/text-escape.png' class='fimg' />
+          </div>
+
+          <div class="tab-pane" id="XmlEd">
+            <h4>Namespace Prefixes</h4>
+            <p>Customize how XML namespace prefixes are rendered in the VS XML editor through
+            the &quot;XML Prefix&quot; entry in the <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/xml-prefix.png' class='fimg' />
+
+            <hr/>
+
+            <h4>XML Closing Tags</h4>
+            <p>Render XML closing element tags in a different color color through
+            the &quot;XML Closing Tag&quot; entry in the <i>Fonts and Colors</i> options page.</p>
+            <img src='images/feat/xml-close.png' class='fimg' />
+
+            <hr/>
+
+            <h4>Match Element Tags</h4>
+            <p>Highlight matching opening/closing element tags.</p>
+            <img src='images/feat/xml-match.png' class='fimg' />
+
+            <hr/>
+
+            <h4>Resolve Namespace Prefixes</h4>
+            <p>Put the cursor over an XML namespace prefix, and a tooltip will
+            tell you what it is mapped to in that context!</p>
+            <img src='images/feat/xml-ns-tooltip.png' class='fimg' />
+          </div>
+
+          <div class="tab-pane" id="Config">
+            <h4>Customizable</h4>
+            <p>You can enable/disable specific Viasfora features from the <i>Tools -> Options</i>
+            dialog in Visual Studio.</p>
+            <img src='images/feat/global-config.png' class='fimg' />
+
+            <p>You can also customize per-language settings.</p>
+            <img src='images/feat/per-lang-config.png' class='fimg' />
+          </div>
         </div>
       </div>
 
@@ -100,5 +141,10 @@
     <!-- Don't forget to add jQuery - download the most recent version at http://jquery.com/ -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('#featuresTab a:first').tab('show')
+      })
+    </script>
   </body>
 </html>
