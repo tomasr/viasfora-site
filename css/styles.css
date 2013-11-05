@@ -1,0 +1,14 @@
+.nav {
+  font-size: 28px;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover {
+  background-color: #AC6166;
+}
+.nav-pills>li>a {
+  color: #6E0006;
+}
+
+
+#logo {
+}
