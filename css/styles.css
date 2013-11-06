@@ -13,10 +13,41 @@
 
 
 #logo {
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.jumbotron .btn {
+  font-size: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .fimg {
   background-color: #e0e0e0;
-  padding: 2px;
+  padding: 4px;
+  margin-top: 0.5em;
 }
 
+
+/* make the default panel use a bold font */
+.panel-default > .panel-heading {
+  font-weight: bold;
+}
+
+/* define a panel look for alternate rows */
+.panel-alternate {
+  border-color: #AC6166;
+}
+.panel-alternate > .panel-heading {
+  font-weight: bold;
+  color: white;
+  background-color: #AC6166;
+  border-color: #AC6166;
+}
+.panel-alternate > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #AC6166;
+}
+.panel-alternate > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #AC6166;
+}
