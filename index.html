@@ -53,11 +53,23 @@
           <li><a href="#TextEd" data-toggle="tab">Text Editor</a></li>
           <li><a href="#XmlEd" data-toggle="tab">XML Editor</a></li>
           <li><a href="#Config" data-toggle="tab">Configuration</a></li>
+          <li><a href="#ChangeLog" data-toggle="tab">Change Log</a></li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane active" id="TextEd">
+
+            <div class="panel panel-alternate">
+              <div class="panel-heading">Rainbow Parentheses</div>
+              <div class="panel-body">
+                <span class='label label-primary'>New in v1.1</span>
+                Inspired by the Vim plugin of the same name, this feature
+                makes it easy to keep track of nested braces. You can customize
+                the colors used for the 4 nesting levels.
+                <img src='images/feat/rainbow.png' class='thumbnail fimg' />
+              </div>
+            </div>
 
             <div class="panel panel-alternate">
               <div class="panel-heading">Current Line Highlight</div>
@@ -168,8 +180,24 @@
             </div>
 
           </div> <!-- tab page -->
+
+          <div class="tab-pane" id="ChangeLog">
+            <h4>Version 1.1</h4>
+            <ul>
+              <li>Implemented Rainbow Parentheses</li>
+            </ul>
+
+            <h4>Version 1.0</h4>
+            <ul>
+              <li>Ported Keyword Classifier</li>
+              <li>Ported BetterXml</li>
+              <li>Ported Line Adornments</li>
+              <li>Fix exception moving to top of XML documents</li>
+              <li>Add configuration dialogs</li>
+            </ul>
+          </div> <!-- tab page -->
         </div>
-      </div> 
+      </div>
 
       <div class="footer">
         <p>&copy; <a href='http://winterdom.com/'>Tomas Restrepo</a> 2013</p>
