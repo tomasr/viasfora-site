@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Viasfora">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -22,199 +24,49 @@
   </head>
 
   <body>
-    <div class="container">
-<!--
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="#">Download</a></li>
-        </ul>
-        <h3 class="text-muted"><a href='/'><img src='images/logo-small.png' id='logo'/></a></h3>
-      </div>
--->
+    <div class="container" id='wrap' ng-controller='VsfController'>
 
-      <div class="jumbotron">
-        <h1><img src='images/logo-small.png' id='logo'/>Viasfora</h1>
-        <p class="lead">A Visual Studio 2010, 2012, and 2013 extension that adds miscellaneous
-        (but useful!) enhancements to the VS text editing experience.</p>
-        <p>
-        <a class="btn btn-lg btn-success" href="http://visualstudiogallery.msdn.microsoft.com/19609469-380e-4fcf-bcde-e31caeb658b2" role="button" title="Download from the Visual Studio Gallery">
-          <i class="fa fa-download"></i>
-        </a>
-        <a class="btn btn-lg btn-warning" href="http://github.com/tomasr/viasfora" role="button" title="Get the source at Github">
-          <i class="fa fa-github"></i>
-        </a>
-        </p>
-      </div>
-
-      <div class="row marketing">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs nav-justified" id="featuresTab">
-          <li><a href="#TextEd" data-toggle="tab">Text Editor</a></li>
-          <li><a href="#XmlEd" data-toggle="tab">XML Editor</a></li>
-          <li><a href="#Config" data-toggle="tab">Configuration</a></li>
-          <li><a href="#ChangeLog" data-toggle="tab">Change Log</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div class="tab-pane active" id="TextEd">
-
-            <div class="panel panel-alternate">
-              <div class="panel-heading">Rainbow Parentheses</div>
-              <div class="panel-body">
-                <span class='label label-primary'>New in v1.1</span>
-                Inspired by the Vim plugin of the same name, this feature
-                makes it easy to keep track of nested braces. You can customize
-                the colors used for the 4 nesting levels.
-                <img src='images/feat/rainbow.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-alternate">
-              <div class="panel-heading">Current Line Highlight</div>
-              <div class="panel-body">
-                Highlight the current line in the text editor, like the built-in one
-                in VS2013, but also available in previous Visual Studio versions.
-                Customize the look through the &quot;Current Line&quot; entry in the
-                <em>Fonts and Colors</em> options page.
-                <img src='images/feat/text-current-line.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-default">
-              <div class="panel-heading">Control Flow Classifier</div>
-              <div class="panel-body">
-                Customize how control-flow related keywords in C#, VB, C/C++, JS are rendered
-                in the VS editor. You can choose which keywords are selected in each language
-                and customize the presentation through the &quot;Keyword - Flow Control&quot; entry
-                in the <em>Fonts and Colors</em> options page.
-                <img src='images/feat/text-flow-control.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-alternate">
-              <div class="panel-heading">LINQ Classifier</div>
-              <div class="panel-body">
-                Customize how Language Integrated Query (LINQ) keywords are rendered in the VS editor.
-                You can choose which keywords are selected for C#, VB, and JS and customize the 
-                presentation through the &quot;Operator - LINQ&quot; entry
-                in the <em>Fonts and Colors</em> options page.
-                <img src='images/feat/text-linq.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-default">
-              <div class="panel-heading">Visibility Classifier</div>
-              <div class="panel-body">
-                Customize how visibility related keywords in C#, VB, and C++ are rendered
-                in the VS editor. You can choose which keywords are selected in each language
-                and customize the presentation through the &quot;Keyword - Visibility&quot; entry
-                in the <em>Fonts and Colors</em> options page.
-                <img src='images/feat/text-visibility.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-alternate">
-              <div class="panel-heading">String Escape Characters</div>
-              <div class="panel-body">
-                Easily recognize escape sequences in your string literals in C#, JS, and C/C++.
-                Customize the presentation through the &quot;String Escape Sequence&quot; entry
-                in the <em>Fonts and Colors</em> options page.
-                <img src='images/feat/text-escape.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-          </div> <!-- tab panel -->
-
-          <div class="tab-pane" id="XmlEd">
-            <div class="panel panel-alternate">
-              <div class="panel-heading">Namespace Prefixes</div>
-              <div class="panel-body">
-                Customize how XML namespace prefixes are rendered in the VS XML editor through
-                the &quot;XML Prefix&quot; entry in the <em>Fonts and Colors</em> options page.
-                <img src='images/feat/xml-prefix.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-default">
-              <div class="panel-heading">XML Closing Tags</div>
-              <div class="panel-body">
-                Render XML closing element tags in a different color color through
-                the &quot;XML Closing Tag&quot; entry in the <em>Fonts and Colors</em> options page.
-                <img src='images/feat/xml-close.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-alternate">
-              <div class="panel-heading">Match Element Tags</div>
-              <div class="panel-body">
-                Highlight matching opening/closing element tags.
-                <img src='images/feat/xml-match.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-            <div class="panel panel-default">
-              <div class="panel-heading">Resolve Namespace Prefixes</div>
-              <div class="panel-body">
-                Put the cursor over an XML namespace prefix, and a tooltip will
-                tell you what it is mapped to in that context!
-                <img src='images/feat/xml-ns-tooltip.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-          </div> <!-- tab page -->
-
-          <div class="tab-pane" id="Config">
-
-            <div class="panel panel-alternate">
-              <div class="panel-heading">Customizable</div>
-              <div class="panel-body">
-                You can enable/disable specific Viasfora features from the <em>Tools -> Options</em>
-                dialog in Visual Studio.
-                <img src='images/feat/global-config.png' class='thumbnail fimg' />
-
-                <p>You can also customize per-language settings.</p>
-                <img src='images/feat/per-lang-config.png' class='thumbnail fimg' />
-              </div>
-            </div>
-
-          </div> <!-- tab page -->
-
-          <div class="tab-pane" id="ChangeLog">
-            <h4>Version 1.1</h4>
-            <ul>
-              <li>Implemented Rainbow Parentheses</li>
-              <li>Fix highlight of closing XML tags for VS2013 new HTML editor</li>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class='container'>
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Viasfora</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li ng-class="getNavClass('banner')"><a href="#">Home</a></li>
+              <li ng-class="getNavClass('texted')"><a href="#/texted">Text</a></li>
+              <li ng-class="getNavClass('xmled')"><a href="#/xmled">XML</a></li>
+              <li ng-class="getNavClass('config')"><a href="#/config">Configuration</a></li>
+              <li ng-class="getNavClass('changelog')"><a href="#/changelog">Change Log</a></li>
             </ul>
-
-            <h4>Version 1.0</h4>
-            <ul>
-              <li>Ported Keyword Classifier</li>
-              <li>Ported BetterXml</li>
-              <li>Ported Line Adornments</li>
-              <li>Fix exception moving to top of XML documents</li>
-              <li>Add configuration dialogs</li>
-            </ul>
-          </div> <!-- tab page -->
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <div class="footer">
-        <p>&copy; <a href='http://winterdom.com/'>Tomas Restrepo</a> 2013</p>
+      <!-- Tab panes -->
+      <div class="view-container">
+        <div ng-view class="view"></div>
       </div>
 
     </div> <!-- /container -->
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Created by <a href="http://winterdom.com">Tomas Restrepo</a>. &copy; 2013</p>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- Don't forget to add jQuery - download the most recent version at http://jquery.com/ -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(function () {
-        $('#featuresTab a:first').tab('show')
-      })
-    </script>
   </body>
 </html>
