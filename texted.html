@@ -32,13 +32,22 @@
   </div>
 
   <div class="panel panel-alternate">
-    <div class="panel-heading">Current Line Highlight</div>
+    <div class="panel-heading">Caret Position Highlight</div>
     <div class="panel-body">
-      Highlight the current line in the text editor, like the built-in one
+      Viasfora can highlight the current line in the text editor, like the built-in one
       in VS2013, but also available in previous Visual Studio versions.
-      Customize the look through the &quot;Current Line&quot; entry in the
+      Customize the look through the &quot;Viasfora Current Line&quot; entry in the
       <em>Fonts and Colors</em> options page.
       <img src='images/feat/text-current-line.png' class='thumbnail fimg' />
+
+      <p/>
+      <p><span class='label label-primary'>New in v1.5</span>
+      You can also highlight the current column in
+      the text editor:</p>
+
+      <img src='images/feat/text-current-col.png' class='thumbnail fimg' />
+      <p>Both of these features come disabled by default, and can be enabled
+      and configured independently of one another.</p>
     </div>
   </div>
 
@@ -47,7 +56,7 @@
     <div class="panel-body">
       Customize how control-flow related keywords are rendered
       in the VS editor. You can choose which keywords are selected in each language
-      and customize the presentation through the &quot;Keyword - Flow Control&quot; entry
+      and customize the presentation through the &quot;Viasfora Flow Control Keyword&quot; entry
       in the <em>Fonts and Colors</em> options page.
       <img src='images/feat/text-flow-control.png' class='thumbnail fimg' />
     </div>
@@ -58,7 +67,7 @@
     <div class="panel-body">
       Customize how Language Integrated Query (LINQ) keywords are rendered in the VS editor.
       You can choose which keywords are selected for each language and customize the 
-      presentation through the &quot;Operator - LINQ&quot; entry
+      presentation through the &quot;Viasfora Query Operator&quot; entry
       in the <em>Fonts and Colors</em> options page.
       <img src='images/feat/text-linq.png' class='thumbnail fimg' />
     </div>
@@ -69,7 +78,7 @@
     <div class="panel-body">
       Customize how visibility related keywords in are rendered
       in the VS editor. You can choose which keywords are selected in each language
-      and customize the presentation through the &quot;Keyword - Visibility&quot; entry
+      and customize the presentation through the &quot;Viasfora Visibility Keyword&quot; entry
       in the <em>Fonts and Colors</em> options page.
       <img src='images/feat/text-visibility.png' class='thumbnail fimg' />
     </div>
@@ -79,7 +88,7 @@
     <div class="panel-heading">String Escape Characters</div>
     <div class="panel-body">
       Easily recognize escape sequences in your string literals in C-based languages.
-      Customize the presentation through the &quot;String Escape Sequence&quot; entry
+      Customize the presentation through the &quot;Viasfora String Escape Sequence&quot; entry
       in the <em>Fonts and Colors</em> options page.
       <img src='images/feat/text-escape.png' class='thumbnail fimg' />
     </div>
@@ -109,6 +118,23 @@
       <p/>
       <p><code>// vim: et:sw=8:ts=8</code></p>
       <p>Find more details <a href='https://github.com/tomasr/viasfora/issues/14'>here</a>.</p>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">User-Defined Outlining</div>
+    <div class="panel-body">
+      <span class='label label-primary'>New in v1.5</span>
+      You can now define arbitrary outlining (collapsible) regions on text files.
+      To add a new region, just highlight the block of text, then select Edit -&gt; 
+      Viasfora -&gt; Add Outlining
+      <img src='images/feat/add-outlining.png' class='thumbnail fimg' />
+      <p>To later remove it, just put the caret inside the outlining region
+      and use the Remove Outlining command instead. If the caret is inside of
+      multiple regions, the one with the start position closest to the caret will
+      be removed.</p>
+      <p>User-defined outlining regions are persisted across sessions through the
+      solution *.suo file.</p>
     </div>
   </div>
 </div> <!-- tab panel -->
