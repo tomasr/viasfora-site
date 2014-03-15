@@ -10,6 +10,11 @@ app.config(['$routeProvider', function($routeProvider, $locationProvider) {
       controller: XmlEdController,
       controllerAs: 'xmled'
     });
+    $routeProvider.when('/extdev', {
+      templateUrl: 'extdev.html',
+      controller: ExtDevController,
+      controllerAs: 'extdev'
+    });
     $routeProvider.when('/config', {
       templateUrl: 'config.html',
       controller: ConfigController,
@@ -44,6 +49,9 @@ function TextEdController($scope) {
 }
 function BannerController($scope) {
   $scope.$parent.selectedNav = 'banner';
+}
+function ExtDevController($scope) {
+  $scope.$parent.selectedNav = 'extdev';
 }
 function ConfigController($scope) {
   $scope.$parent.selectedNav = 'config';
