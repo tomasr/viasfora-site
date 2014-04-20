@@ -62,23 +62,23 @@ body {
 
 /* define a panel look for alternate rows */
 .panel-alternate {
-  border-color: #AC6166;
+  border-color: #5FB3C2;
 }
 .panel-alternate > .panel-heading {
   font-weight: bold;
   color: white;
-  background-color: #AC6166;
-  border-color: #AC6166;
+  background-color: #5FB3C2;
+  border-color: #5FB3C2;
 }
 .panel-alternate > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #AC6166;
+  border-top-color: #5FB3C2;
 }
 .panel-alternate > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #AC6166;
+  border-bottom-color: #5FB3C2;
 }
 
 .navbar-default .navbar-brand {
-  color: #AC6166;
+  color: #5FB3C2;
   font-weight: bold;
   font-size: 20px;
   line-height: 22px;
@@ -86,7 +86,7 @@ body {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #AC6166;
+  color: #5FB3C2;
   background-color: transparent;
 }
 
