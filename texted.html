@@ -30,10 +30,21 @@
       makes it easy to keep track of nested braces. You can customize
       the colors used for the 4 nesting levels.
       <img src='images/feat/rainbow.png' class='thumbnail fimg' />
+      <p/>
       <span class='label label-primary'>New in v1.8.1</span>
-      Holding the left Ctrl key for a bit will highlight the rainbow braces
+      Holding the left <kbd>Ctrl</kbd> key for a bit will highlight the rainbow braces
       around the caret position:
       <img src='images/feat/rainbow_highlight.gif' class='thumbnail fimg' />
+      <p/>
+      <span class='label label-primary'>New in v2.0</span>
+      You can now use the &quot;Rainbow Previous&quot; (<kbd>Ctrl+Alt+,</kbd>) and
+      &quot;Rainbow Next&quot; (<kbd>Ctrl+Alt+.</kbd>) commands to navigate to the
+      braces around the caret position.
+      <p>If you hover the mouse over a brace, and the matching brace is 
+      apart enough, a tooltip will appear to preview the matching
+      brace:
+      </p>
+      <img src='images/feat/rainbow-tooltip.png' class='thumbnail fimg' />
     </div>
   </div>
 
@@ -157,7 +168,7 @@
       <img src='images/feat/plain-text.png' class='thumbnail fimg' />
 
       Version 1.9 includes additional settings for this feature, as well
-      as support for using Ctrl+K,T to trigger completion.
+      as support for using <kbd>Ctrl+K, Ctrl+T</kbd> to trigger completion.
     </div>
   </div>
 
@@ -169,6 +180,44 @@
         <li>Bold as Italics: Render any classification item configured to use
             bold fonts using italics instead!</li>
       </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-alternate">
+    <div class="panel-heading">Text Obfuscation</div>
+    <div class="panel-body">
+      <span class='label label-primary'>New in v2.0</span>
+      Provides an easy way to hide text in the editor during presentations,
+      based on regular expressions.  You can configure obfuscation expressions
+      from Tools -&gt; Options -&gt; Viasfora -&gt; Text Hiding:
+
+      <img src='images/feat/text-obfuscation-config.png' class='thumbnail fimg' />
+
+      <p/>
+      <p>The Options column can be used in the following manner:
+      <ul>
+        <li><strong>HideMatch:</strong> The entire substring matched 
+        by the regular expression will be obfuscated</li>
+        <li><strong>HideGroups:</strong> Only groups with index &gt;= 1 will be 
+        obfuscated. This allows you to use capture groups in the regular
+        expressions together with non-capturing groups (?:) to control 
+        more precisely what gets obfuscated.
+      </ul>
+
+      <p>For example, if you use the following regular expression:</p>
+      <p><code>(?:apiKey\s*=\s*&quot;)(.*)(?:&quot;)</code></p>
+
+      <p>With HideGroups, it will look for a variable called apiKey set to a
+      string literal, but will only obfuscate the contents of the string 
+      literal (it's not a perfect example, just useful for presenting it).</p>
+
+      <p>By default, text obfuscation is always disabled. To enable it, 
+      use the View -&gt; Obfuscate Text command or the <kbd>Ctrl+E, Ctrl+O</kbd> key combination:</p>
+
+      <img src='images/feat/text-obfuscation.png' class='thumbnail fimg' />
+
+      <p>You can disable text obfuscation using the same command. If you 
+      close and start a new VS instance, it will be again disabled.</p>
     </div>
   </div>
 </div> <!-- tab panel -->
